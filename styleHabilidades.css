@@ -1,0 +1,78 @@
+
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reducir espacio entre categorías */
+    padding: 0 10px; /* Añadir algo de padding para optimizar el uso del espacio */
+}
+
+.skill-category {
+    background-color: #f9f9f9;
+    padding: 3px; /* Reducir padding para optimizar el espacio */
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category h4 {
+    font-size: 1.1em; /* Reducir tamaño de los títulos */
+    color: cornflowerblue;
+    margin-bottom: 8px; /* Reducir margen inferior */
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-category li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alinear a la izquierda, estrellas a la derecha */
+    font-size: 0.85rem; /* Reducir el tamaño de la fuente de las habilidades */
+    margin-bottom: 0.4px; /* Reducir separación entre filas */
+}
+
+.skill-name {
+    flex: 1; /* Deja que el nombre ocupe todo el espacio disponible */
+    white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+    text-overflow: ellipsis; /* Si el texto es muy largo, agregar "..." al final */
+    overflow: hidden; /* Evitar que el texto se desborde */
+}
+
+.stars {
+    display: inline-block;
+    font-size: 1.7rem; /* Tamaño de las estrellas */
+    color: gold;
+}
+
+.stars::before {
+    content: "★★★★★";
+    letter-spacing: 2px;
+    color: lightgray; /* Color de fondo de las estrellas (vacías) */
+}
+
+.stars[data-level="1"]::before {
+    content: "★☆☆☆☆";
+    color: gold;
+}
+
+.stars[data-level="2"]::before {
+    content: "★★☆☆☆";
+    color: gold;
+}
+
+.stars[data-level="3"]::before {
+    content: "★★★☆☆";
+    color: gold;
+}
+
+.stars[data-level="4"]::before {
+    content: "★★★★☆";
+    color: gold;
+}
+
+.stars[data-level="5"]::before {
+    content: "★★★★★";
+    color: gold;
+}

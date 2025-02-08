@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertir a PDF</title>
+    
+    <!-- Archivos CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styleHabilidades.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Librerías JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div id="contenido" style="padding: 20px; text-align: center; background-color: #f9f9f9; border: 1px solid #ccc; border-radius: 10px;">
+        <h1>Hola Mundo</h1>
+        <img src="./FotoCarnet.jpg" alt="Foto" class="photo" style="max-width: 200px; border-radius: 10px;">
+        <p>Este es un ejemplo de PDF generado desde HTML.</p>
+    </div>
+    <button id="btnDescargar" style="margin-top: 20px; padding: 10px 20px; font-size: 16px;">Descargar PDF</button>
+
+    <script>
+        document.getElementById('btnDescargar').addEventListener('click', function () {
+            const elemento = document.getElementById('contenido');
+
+            // Ajustes para asegurar buena renderización
+            const opciones = {
+                margin: [0.5, 0.5, 0.5, 0.5], // Márgenes en pulgadas
+                filename: 'ejemplo.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: {
+                    scale: 3, // Aumenta la resolución del canvas
+                    useCORS: true, // Soporta imágenes de otros dominios si tienen CORS
+                    logging: true, // Habilita mensajes en la consola
+                },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+
+            // Generar PDF
+            html2pdf().set(opciones).from(elemento).save().catch(err => {
+                console.error('Error al generar el PDF:', err);
+            });
+        });
+    </script>
+</body>
+</html>

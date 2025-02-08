@@ -1,0 +1,219 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 21.59cm;
+    height: 33.02cm;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.header-container {
+    display: flex;
+    align-items: flex-start; /* Cambiar para alinear más cerca del borde superior */
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.photo-container img {
+    width: 190px;
+    height: 210px;
+    border-radius: 190%;
+    margin-top: -20px; /* Subir la foto más arriba */
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alineación de los elementos hacia la parte superior */
+    align-items: flex-end;
+}
+
+.info-container h1, .info-container h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.contact-info {
+    font-size: 0.8rem; /* Reducir el tamaño de la fuente */
+    line-height: 1.4; /* Ajustar interlineado para mejor legibilidad */
+    margin-top: 10px;
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 2px 0;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    margin-left: 100px;
+}
+
+.contact-info li i {
+    margin-right: 8px;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-info strong {
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+/* Estilos generales de la tabla */
+.experience-table {
+    width: 90%; /* Reducido el ancho para no pegarlo tanto a los bordes */
+    margin: 20px auto; /* Separación superior e inferior y centrado horizontal */
+    border-collapse: collapse;
+    font-size: 0.75rem; /* Ajuste de tamaño de texto ligeramente más pequeño */
+    color: #333; /* Color de texto */
+}
+
+/* Estilo para las celdas de la tabla */
+.experience-table td, .experience-table th {
+    padding: 10px 15px; /* Aumento ligeramente el espaciado interno */
+    text-align: left; /* Alineación a la izquierda */
+}
+
+/* Estilo para los encabezados de la tabla */
+.experience-table th {
+    background-color: #007bff; /* Azul de fondo */
+    color: white; /* Texto en blanco */
+    font-weight: bold; /* Texto en negrita */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-size: 0.6.5rem; /* Tamaño de la fuente más pequeño */
+}
+
+/* Estilo para las filas alternadas */
+.experience-table tr:nth-child(even) {
+    background-color: #f4f4f4; /* Fila gris claro */
+}
+
+/* Estilo para las filas al pasar el mouse por encima */
+.experience-table tr:hover {
+    background-color: #e0e0e0; /* Fila al pasar el mouse */
+    cursor: pointer; /* Cambia el cursor */
+}
+
+/* Bordes de las celdas */
+.experience-table td, .experience-table th {
+    border: 1px solid #ddd; /* Bordes sutiles */
+}
+
+/* Estilo general para la tabla */
+.experience-table {
+    border-radius: 8px;
+    overflow: hidden; /* Asegura que los bordes redondeados se apliquen correctamente */
+}
+
+
+.experience-table-proyectos {
+    width: 100%;
+    border-collapse: collapse;
+}
+.experience-table-proyectos th, .experience-table-proyectos td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+.experience-table-proyectos th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+.experience-table-proyectos tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+
+.separator {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: none; /* Elimina el borde predeterminado */
+    height: 2px; /* Ajusta el grosor de la línea */
+    background: linear-gradient(to right, #66aaff, #66aaff); /* Gradiente de azul */
+}
+
+/* Mejorar la responsividad */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .photo-container img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+table {
+    font-size: 12px; /* Aumento el tamaño de la fuente */
+    border-collapse: collapse;
+    margin-left: 20px; /* Ajusto para que no quede tan pegado a la izquierda */
+}
+th, td {
+    padding: 8px; /* Aumento el espacio entre celdas */
+    text-align: left;
+}
+th {
+    text-align: center;
+    background-color: #f0f0f0; /* Un color suave de fondo para los encabezados */
+}
+
+
