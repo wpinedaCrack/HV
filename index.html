@@ -2,15 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convertir a PDF</title>
-    
-    <!-- Archivos CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./styleHabilidades.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <!-- Librerías JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 </head>
 
@@ -510,27 +505,7 @@
         </table>
 
     </div>
-
-      
-  
-    <button id="download">Descargar como PDF</button>
-    <button onclick="convertirPDF()">Descargar PDF</button>
-
-
-    <script>
-         function convertirPDF() {
-            const elemento = document.getElementById('contenido');
-            html2pdf().from(elemento).save();
-        }
-        document.getElementById('download').addEventListener('click', function() {
-            console.log("Generando PDF...");
-            const element = document.getElementById('content');
-            
-            // Usamos html2pdf para generar el PDF
-            html2pdf()
-                .from(element)
-                .save('hoja_de_vida.pdf'); // El archivo PDF se descargará con este nombre
-        });
+    <script>       
     </script>
 
 </body>
